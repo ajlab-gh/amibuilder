@@ -1,6 +1,6 @@
 # Custom Image Builder
 
-This tool allows you to build custom images for deployment using Terraform and AWS. Follow the steps below to get started.
+This tool allows you to build custom AMI's in AWS using Terraform. Follow the steps below to get started.
 
 ---
 
