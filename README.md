@@ -59,12 +59,14 @@ Confirm the deployment when prompted.
 ---
 
 ## 📝 Notes
-- Ensure that your AWS IAM user has the necessary permissions to create key pairs, EC2 instances, and associated resources.
-- Save the private key (`aws_key_pair`) in a secure location; it’s required for SSH access to the instance.
-- Use `terraform destroy` to tear down resources when they're no longer needed:
+
+- Verify that your AWS IAM user has sufficient permissions to create key pairs, EC2 instances, and related resources.
+- Store the private key (`aws_key_pair`) securely; it will be required for SSH access to the EC2 instance.
+- Use the following command to clean up resources provisioned by Terraform when they're no longer needed:
   ```bash
   terraform destroy
   ```
+- **Important**: Manually delete assets created by the EC2 host. Resources such as `snapshots` and `AMIs` will persist after running `terraform destroy`, as they are not managed directly by Terraform.
 
 ---
 
