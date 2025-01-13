@@ -9,8 +9,8 @@ This tool allows you to build custom AMI's in AWS using Terraform. Follow the st
 ### 1. Clone the Repository
 Clone the repository to your local machine:
 ```bash
-git clone https://ajlab-gh/custom-image
-cd custom-image
+git clone https://ajlab-gh/amibuilder
+cd amibuilder
 ```
 
 ### 2. Initialize Terraform
