@@ -40,7 +40,7 @@ This will generate two files:
 Keep the private key (`aws_key_pair`) secure as it will be required to SSH into the instance.
 
 ### 5. Add Your Custom Image
-Place your custom image in the root directory of the project. **The image must be in the `.out.OpenXen.zip` format.**
+Place your custom image in the root directory of the project. **The image must be a `qcow2` format.**
 
 ### 6. Build Your Image
 Deploy the configuration by applying Terraform:

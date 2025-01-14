@@ -4,7 +4,7 @@ provider "aws" {
 
 variable "image_file" {
   type    = string
-  default = "FAZ_VM64_AWS-v7-build2461-FORTINET.out.OpenXen.zip"
+  default = "FSA_OCI-v400-build0397-FORTINET.out.kvm.zip"
   #FMG_VM64_AWS-v7-build2457-FORTINET.out.OpenXen.zip
   #FAZ_VM64_AWS-v7-build2457-FORTINET.out.OpenXen.zip
 }
