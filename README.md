@@ -28,7 +28,46 @@ export AWS_SESSION_TOKEN="<YOUR_AWS_SESSION_TOKEN>"
 ```
 
 ### 4. Create a Key Pair
-Generate an SSH key pair to be used for instance authentication:
+If you do not have OpenSSH installed, please follow these steps for installation:
+
+# Installing OpenSSH Client for Certificate Generation
+
+## Ubuntu Installation
+1. Update package list
+   ```bash
+   sudo apt update
+   ```
+
+2. Install OpenSSH client only
+   ```bash
+   sudo apt install openssh-client
+   ```
+
+3. Verify installation
+   ```bash
+   ssh -V
+   ```
+
+## Windows Installation
+
+1. Open PowerShell as Administrator
+
+2. Check if OpenSSH Client is already installed
+   ```powershell
+   Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH.Client*'
+   ```
+
+3. Install OpenSSH Client if not installed
+   ```powershell
+   Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+   ```
+
+4. Verify installation
+   ```powershell
+   ssh -V
+   ```
+
+After installation on either system, you can generate SSH keys using:
 ```bash
 ssh-keygen -t rsa -b 2048 -f aws_key_pair
 ```
@@ -48,13 +87,6 @@ Deploy the configuration by applying Terraform:
 terraform apply
 ```
 Confirm the deployment when prompted.
-
----
-
-## 🛠️ Key Features
-- **Customizable Deployment**: Modify the Terraform configuration to suit your image deployment needs.
-- **AWS Integration**: Seamlessly integrates with AWS for image building and instance provisioning.
-- **Secure Authentication**: Uses SSH key pairs for secure access.
 
 ---
 
