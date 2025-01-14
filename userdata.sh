@@ -58,7 +58,7 @@ aws s3 cp --region "$REGION" "s3://$BUCKET/$SOURCE_FILENAME" . || exit 1
 echo unziping
 unzip $SOURCE_FILENAME
 
-# dynamically find the cqow2 image based on size (datadisk cqow is smaller)
+# dynamically find the QCOW2 image based on size (datadisk QCOW2 is smaller)
 find_largest_qcow2() {
     local largest_file=""
     local max_size=0
