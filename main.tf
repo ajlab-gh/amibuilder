@@ -4,9 +4,7 @@ provider "aws" {
 
 variable "image_file" {
   type    = string
-  default = "FSA_OCI-v400-build0397-FORTINET.out.kvm.zip"
-  #FMG_VM64_AWS-v7-build2457-FORTINET.out.OpenXen.zip
-  #FAZ_VM64_AWS-v7-build2457-FORTINET.out.OpenXen.zip
+  default = "FMG_VM64_AWS-v7.4.6.M-build2588-FORTINET.out.OpenXen.zip"
 }
 
 variable "subnets_names" {
@@ -16,7 +14,7 @@ variable "subnets_names" {
 
 variable "tag_name_prefix" {
   type    = string
-  default = "terraform-test-faz"
+  default = "terraform-test-fmg"
 }
 
 variable "vpc_cidr" {
