@@ -1,5 +1,6 @@
 #Zip Files for Custom AMI Build
 FMG_VM64_AWS-v7.4.6.M-build2588-FORTINET.out.OpenXen.zip
+FAZ_VM64_AWS-v7-build2461-FORTINET.out.OpenXen.zip
 
 #Ignore out your key Pair
 aws_key_pair

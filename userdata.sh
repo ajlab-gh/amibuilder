@@ -2,7 +2,7 @@
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 #Wait for the repo 
 echo "Waiting for internet access"
-curl --retry 20 -s -o /dev/null "https://aws.amazon.com"
+curl --retry 30 -s -o /dev/null "https://aws.amazon.com"
 
 cd /root
 pwd
@@ -98,6 +98,8 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Using qcow2 file: $SOURCE_FILENAME_QCOW2"
+echo "check qcow image: $SOURCE_FILENAME_QCOW2"
+qemu-img info $SOURCE_FILENAME_QCOW2
 echo "Converting $SOURCE_FILENAME_QCOW2 to raw file format"
 qemu-img convert -O raw "$SOURCE_FILENAME_QCOW2" "$DESTINATION_FILENAME"
 
